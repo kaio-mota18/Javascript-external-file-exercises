@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Corretora MOTA</title>
+
+    <script src="info.js"></script>
+    <script src="add.js"></script>
+    <script src="clean.js"></script>
+
+    
+    </style>
+  </head>
+  <body>
+    <h2>Cadastro de imóveis</h2>
+    <form onsubmit="save()">
+      <p>
+        <label>Tipo de imóvel</label>
+        <select name="house-type">
+          <option value="apartment">Apartamento</option>
+          <option value="house">Casa</option></select
+        ><br />
+      </p>
+
+      <p>
+        <label>Área</label>
+        <input
+          type="number"
+          step="any"
+          min="0"
+          name="area"
+          placeholder="em m²"
+        />
+      </p>
+
+      <p>
+        <label>Região</label>
+        <input type="text" name="neighbourhood" autocomplete="on" />
+      </p>
+
+      <p><input type="checkbox" name="rented" />Alugado</p>
+
+      <button onclick="addHouse()" type="button">Enviar</button>
+      <button onclick="clean()" type="button">Limpar</button>
+      <hr />
+    </form>
+
+    <h3>Imóveis cadastrados</h3>
+    <br />
+
+    <ol id="house-list"></ol>
+  </body>
+</html>
